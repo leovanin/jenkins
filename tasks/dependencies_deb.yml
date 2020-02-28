@@ -1,0 +1,4 @@
+---
+- name: Install dependencies
+  apt: name={{ item }} state=present
+  with_items: "{{ jenkins.deb.dependencies }}"
